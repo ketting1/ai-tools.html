@@ -1,10 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools - AfroNova Hub</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <!-- No external CSS needed – all styles are built-in -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* navigation */
+        nav {
+            background: #0f172a;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* hero section */
+        .hero {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #cbd5e1;
+        }
+
+        /* cards grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card p {
+            color: #334155;
+            margin-bottom: 1.25rem;
+        }
+
+        /* fake badge / tag */
+        .tool-tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-top: 0.5rem;
+        }
+
+        /* footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: auto;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav {
+                gap: 1.2rem;
+                padding: 0.8rem 1rem;
+            }
+            .cards {
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
 <body>
 
 <nav>
@@ -16,34 +166,57 @@
 </nav>
 
 <section class="hero">
-
     <h1>🤖 AI Tools</h1>
-
     <p>
         Discover powerful AI tools for content creation,
         learning, business, coding, and productivity.
     </p>
-
 </section>
 
 <div class="cards">
-
+    <!-- original 3 cards -->
     <div class="card">
         <h3>ChatGPT</h3>
-        <p>AI assistant for writing and research.</p>
+        <p>AI assistant for writing and research. Great for brainstorming, emails, and content generation.</p>
+        <span class="tool-tag">⭐ most popular</span>
     </div>
 
     <div class="card">
         <h3>Claude</h3>
-        <p>Long-form reasoning and analysis.</p>
+        <p>Long-form reasoning and analysis. Perfect for complex documents, code review, and deep conversations.</p>
+        <span class="tool-tag">📄 long context</span>
     </div>
 
     <div class="card">
         <h3>Gemini</h3>
-        <p>Google's AI assistant and search companion.</p>
+        <p>Google's AI assistant and search companion. Integrates with Gmail, Docs, and YouTube.</p>
+        <span class="tool-tag">🔗 google ecosystem</span>
     </div>
 
+    <!-- extra cards to make the page richer -->
+    <div class="card">
+        <h3>Midjourney</h3>
+        <p>AI image generation from text prompts. Create stunning art, logos, and concept visuals.</p>
+        <span class="tool-tag">🎨 creative</span>
+    </div>
+
+    <div class="card">
+        <h3>Perplexity AI</h3>
+        <p>AI-powered research & answer engine with citations. Perfect for fact‑checking and deep dives.</p>
+        <span class="tool-tag">🔍 research</span>
+    </div>
+
+    <div class="card">
+        <h3>GitHub Copilot</h3>
+        <p>Your AI pair programmer. Writes code, suggests functions, and speeds up development.</p>
+        <span class="tool-tag">💻 coding</span>
+    </div>
 </div>
+
+<footer>
+    <p>© 2025 AfroNova Hub — Empowering creators with AI & tech.</p>
+    <p>📧 hello@afronovahub.com | 🌍 <a href="#">afronovahub.com</a></p>
+</footer>
 
 </body>
 </html>
